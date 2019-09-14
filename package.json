@@ -1,6 +1,6 @@
 {
   "name": "incursu-react-native",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "A React Native client for [Incursu](https://incursu.com) — All-in-one Product, Customer and Behavioral Analytics.",
   "keywords": [
     "analytics",
@@ -9,7 +9,7 @@
     "driver",
     "react-native"
   ],
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch",
@@ -62,5 +62,8 @@
         "npm run test"
       ]
     }
+  },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
   }
 }

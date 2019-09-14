@@ -80,7 +80,7 @@ export default class Incursu {
       }
     }
 
-    axios.post(`${this.host}/${action}`, msg, config)
+    axios.post(`${this.host}/${action}`, msg, config).then(req => { console.log(req) })
   }
 
 }

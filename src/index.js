@@ -73,18 +73,14 @@ export default class Incursu {
 
   post(action, msg) {
 
-    axios(
-      `${this.host}/${action}`,
-      {
-        msg,
-        method: 'post',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'X-Api-Key': this.writeKey,
-        },
-      },
-    )
+    let headers = {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'X-Api-Key': this.writeKey,
+    }
+
+    axios.post(`${this.host}/${action}`, msg, headers)
   }
+
 }
 
 Incursu.DEFAULT_HOST = 'https://api.incursu.com/v1/client';

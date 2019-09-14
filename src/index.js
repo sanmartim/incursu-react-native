@@ -87,7 +87,7 @@ export default class Incursu {
   }
 }
 
-Incursu.DEFAULT_HOST = 'https://api.incursu.com/v1/client/';
+Incursu.DEFAULT_HOST = 'https://api.incursu.com/v1/client';
 
 Incursu.DEFAULT_FLUSH_AT = 20;
 

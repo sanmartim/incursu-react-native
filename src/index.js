@@ -73,12 +73,14 @@ export default class Incursu {
 
   post(action, msg) {
 
-    let headers = {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'X-Api-Key': this.writeKey,
+    let config = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'X-Api-Key': this.writeKey,
+      }
     }
 
-    axios.post(`${this.host}/${action}`, msg, headers)
+    axios.post(`${this.host}/${action}`, msg, config)
   }
 
 }

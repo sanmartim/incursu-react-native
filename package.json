@@ -1,6 +1,6 @@
 {
   "name": "incursu-react-native",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A React Native client for [Incursu](https://incursu.com) — All-in-one Product, Customer and Behavioral Analytics.",
   "keywords": [
     "analytics",

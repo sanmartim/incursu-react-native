@@ -79,7 +79,7 @@ export default class Incursu {
         msg,
         method: 'post',
         headers: {
-          'Content-Type': 'application/json; charset=utf-8',
+          'Content-Type': 'application/x-www-form-urlencoded',
           'X-Api-Key': this.writeKey,
         },
       },

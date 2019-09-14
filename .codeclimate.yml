@@ -1,0 +1,19 @@
+engines:
+  fixme:
+    enabled: true
+  duplication:
+    enabled: false
+  eslint:
+    enabled: true
+    channel: "eslint-3"
+    checks:
+      import/no-unresolved:
+        enabled: false
+      import/extensions:
+        enabled: false
+
+ratings:
+  paths:
+    - "**.js"
+exclude_paths:
+  - "test/**/*.js"

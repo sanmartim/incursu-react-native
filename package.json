@@ -1,0 +1,66 @@
+{
+  "name": "incursu-react-native",
+  "version": "0.1-beta.1",
+  "description": "A React Native client for [Incursu](https://incursu.com) — All-in-one Product, Customer and Behavioral Analytics.",
+  "keywords": [
+    "analytics",
+    "incursu",
+    "client",
+    "driver",
+    "react-native"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "coverage": "npm test -- --coverage",
+    "coverage:html": "npm run coverage && open ./coverage/index.html",
+    "coverage:publish": "npm run coverage && cat ./coverage/lcov.info | codecov",
+    "lint": "eslint src/",
+    "compile": "babel -d lib/ src/ --ignore '**/*.test.js'",
+    "prepare": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanmartim/incursu-react-native.git"
+  },
+  "author": "Michael San Martim <michaelsanmartim@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/sanmartim/incursu-react-native",
+  "bugs": {
+    "url": "https://github.com/sanmartim/incursu-react-native/issues"
+  },
+  "dependencies": {
+    "axios": "0.19.0",
+    "axios-retry": "3.1.2",
+    "base-64": "0.1.0",
+    "type-of": "2.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "@babel/register": "7.4.4",
+    "babel-eslint": "10.0.2",
+    "babel-plugin-inline-package-json": "2.0.0",
+    "eslint": "6.0.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.18.0",
+    "jest": "24.8.0",
+    "jest-mock-axios": "3.0.0",
+    "pre-git": "3.17.1"
+  },
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "config": {
+    "pre-git": {
+      "pre-commit": [
+        "npm run lint"
+      ],
+      "pre-push": [
+        "npm run test"
+      ]
+    }
+  }
+}
